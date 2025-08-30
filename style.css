@@ -78,6 +78,13 @@ ul li{
     align-items: center;
 }
 
+select#website-select{
+  border: none;
+  border-radius: 30px;
+  padding: 8px 5px;
+  background-color: #ffffffee;
+  }
+
 .upper-header .container-fluid{
     display: flex;
     justify-content: space-between;

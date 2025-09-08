@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
     <link rel="stylesheet" href="pages.css">
-    <title>Dastur COED</title>
+    <title>Sardar Dastur Hormazdiar High School</title>
 </head>
 <body>
     <header>
@@ -16,30 +16,38 @@
             <div class="upper-header">
                 <div class="container-fluid">
                     <div class="left-upper-header">
-                        <a href="#"><span class="fas fa-envelope"></span> someone@example.com</a>
+                        <a href="mailto:sdhhs@dasturcoed.org"><span class="fas fa-envelope"></span> sdhhs@dasturcoed.org</a>
                         <a href="tel:02026362634"><span class="fas fa-phone"></span> 020 2636 2634., Ext. : 602</a>
                     </div>
+                    <div class="middle-upper-header">
+                      <select name="websites" id="website-select">
+                          <option value="">--Other School Website--</option>
+                          <option value="trust"><a target="_blank" href="https://nishabukke.github.io/dastur-trust/">Sardar Dastur Schools Trust</a></option>
+                          <option value="primary"><a target="_blank" href="https://nishabukke.github.io/Dastur_Primary/">Bai Najamai Nosherwan Dastur Primary & Nursery School</a></option>
+                          <option value="boys"><a target="_blank" href="https://nishabukke.github.io/dastur-boys/">The Sardar Dastur Hoshang Boys' School</a></option>
+                          <option value="coed"><a target="_blank" href="https://nishabukke.github.io/dastur-coed-demo2/">Sardar Dastur Hormazdiar High School</a></option>
+                          <option value="girls"><a target="_blank" href="https://nishabukke.github.io/dastur-girls/">The Sardar Dastur Nosherwan Girls' High School</a></option>
+                          <option value="jr-college"><a target="_blank" href="https://nishabukke.github.io/dastur-college/">Sardar Dastur Hormazdiar Junior College</a></option>
+                      </select>
+                    </div>
                     <div class="right-upper-header">
-                        <a href="calender.html" class="active">Calender</a>
-                        <a href="gallery.html">Gallery</a>
+                        <a href="calender.html">Calendar</a>
                         <a href="#" class="payment-btn">Online Payment</a>
                     </div>
                 </div>
             </div>
         <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
           <div class="carousel-inner">
-              <div class="carousel-item active gallery">
-                <img src="images/gallery1.jpg" class="d-block w-100" alt="contact banner">
+              <div class="carousel-item active">
+                <img src="images/gallery1.jpg" class="d-block w-100" alt="...">
               </div>
           </div>
-          <div class="contact-banner-content">
-              <h1 class="text-white">Event Calender</h1>
+          <div class="carousel-overlay"></div>
+          <div class="carousel-overlay1"></div>
         </div>
-          <div class="contact-carousel-overlay"></div>
-          <!-- <div class="contact-carousel-overlay1"></div> -->
-        </div>
-        <div class="lower-header">
-          <div class="container-fluid">
+        <div class="lower-header sticky-wrapper" id="sticky-wrapper">
+          <div class="sticky-area">
+            <div class="container-fluid">
             <a href="index.html" class="logo">
               <img src="images/logo.png" alt="logo img">
               <h1 class="school-name">Sardar Dastur <br> Hormazdiar High School</h1>
@@ -55,17 +63,12 @@
                         </ul>
                       </div>
                   </li>
-                  <li class="nav-li"><a href="#">Rules  </a>
+                  <li class="nav-li"><a href="#">Rules & Facilities</a>
                     <div class="dropdown">
                         <ul>
                             <li><a href="#">Timings & Prayer</a></li>
+                            <li><a href="uniform.html">Uniform</a></li>
                             <li><a href="#">Rules for School</a></li>
-                        </ul>
-                      </div>
-                  </li>
-                  <li class="nav-li"><a href="#">Infrastructure & Facilities  </a>
-                    <div class="dropdown">
-                        <ul>
                             <li><a href="#">Infrastructure</a></li>
                             <li><a href="#">Facilities</a></li>
                             <li><a href="#">Library</a></li>
@@ -73,19 +76,21 @@
                         </ul>
                       </div>
                   </li>
-                  <li class="nav-li"><a href="#">Academics  </a>
+                  <li class="nav-li"><a href="#">Academics</a>
                     <div class="dropdown">
                         <ul>
                             <li><a href="#">Curriculum & Affiliation</a></li>
                             <li><a href="#">Examination & Promotion</a></li>
-                            <li><a href="#">Awards</a></li>
+                            <li><a href="#">Results & Awards</a></li>
                             <li><a href="#">Co-curricular</a></li>
                         </ul>
                       </div>
                   </li>
+                  <li class="nav-li"><a href="gallery.html">Gallery</a></li>
                   <li class="nav-li"><a href="contact.html">Contact Us</a></li>
                 </ul>
             </div>
+          </div>
           </div>
         </div>  
       </div>
@@ -94,58 +99,59 @@
     <main class="site-content">
         <section class="breadcrumbs">
             <div class="container-fluid">
-                <a href="index.html">Home <span class="fas fa-angle-right"></span></a> Calender 
+                <a href="index.html">Home <span class="fas fa-angle-right"></span></a> Calendar 
             </div>
         </section>
 
-        <section class="event-content section-lg">
-            <div class="event-calender">
-              <div class="container-fluid">
-                  <div class="row">
-                      <div class="col-lg-5">
-                          <div class="header">
-                              <div id="month"></div>
-                              <div>
-                                <button id="btnBack"><i class="fas fa-angle-left"></i></button>
-                                <button id="btnNext"><i class="fas fa-angle-right"></i></button>
-                              </div>
-                            </div>
-                            <div class="weekdays">
-                              <div>Sun</div>
-                              <div>Mon</div>
-                              <div>Tue</div>
-                              <div>Wed</div>
-                              <div>Thu</div>
-                              <div>Fri</div>
-                              <div>Sat</div>
-                            </div>
-                            <div id="calendar"></div>
-                      </div>
-                          <div id="modal"></div>
-                          <div id="addEvent">
-                            <h2>Add Event</h2>
-                            <input type="text" id="txtTitle" placeholder="Event Title" />
-                            <button id="btnSave">Save</button>
-                            <button class="btnClose">Close</button>
-                          </div>
-                          <div id="viewEvent">
-                            <h2>Event</h2>
-                            <p id="eventText">This is Sample Event</p>
-                            <button id="btnDelete">Delete</button>
-                            <button class="btnClose">Close</button>
-                          </div>
-  
-                      <div class="col-lg-7">
-                          <div class="event-desc">
-                              <h3>Events</h3>
-                              <ul>
-                                  <li><span>Date</span> No events</li>
-                              </ul>
-                          </div>
-                      </div>
-                      </div>
-                  </div>
-            </div>
+        <section class="calendar-section section-lg container-fluid">
+          <table class="calendar-table table-responsive">
+            <thead>
+              <tr>
+                <th>Month</th>
+                <th>Date</th>
+                <th>Day</th>
+                <th>Occasion</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="Month">June</td><td data-label="Date">16.06.2025</td><td data-label="Day">Monday</td><td data-label="Occasion">School Re-Opens</td></tr>
+              
+              <tr><td rowspan="2" data-label="Month">July</td><td data-label="Date">16.07.2025</td><td data-label="Day">Wednesday</td><td data-label="Occasion">Kadmi New Year</td></tr>
+              <tr><td data-label="Date">21.07.2025</td><td data-label="Day">Monday</td><td data-label="Occasion">Kadmi Khordad Saal</td></tr>
+
+              <tr><td rowspan="4" data-label="Month">August</td><td data-label="Date">13.08.2025</td><td data-label="Day">Wednesday</td><td data-label="Occasion">4th Gatha</td></tr>
+              <tr><td data-label="Date">14.08.2025</td><td data-label="Day">Thursday</td><td data-label="Occasion">5th Gatha</td></tr>
+              <tr><td data-label="Date">20.08.2025</td><td data-label="Day">Wednesday</td><td data-label="Occasion">Parsi Khordad Saal</td></tr>
+              <tr><td data-label="Date">27.08.2025</td><td data-label="Day">Wednesday</td><td data-label="Occasion">Ganesh Chathurthi</td></tr>
+
+              <tr><td rowspan="2" data-label="Month">September</td><td data-label="Date">05.09.2025</td><td data-label="Day">Friday</td><td data-label="Occasion">Eid-e-Milad</td></tr>
+              <tr><td data-label="Date">22.09.2025</td><td data-label="Day">Monday</td><td data-label="Occasion">Ghatasthapna / Navarati 1st day</td></tr>
+
+              <tr><td data-label="Month">October</td><td data-label="Date">02.10.2025</td><td data-label="Day">Thursday</td><td data-label="Occasion">Dussehra / Gandhi Jayanti<br>Diwali Break (17.10.2025 - 31.10.2025)</td></tr>
+
+              <tr><td rowspan="2" data-label="Month">November</td><td data-label="Date">03.11.2025</td><td data-label="Day">Monday</td><td data-label="Occasion">School Re-open</td></tr>
+              <tr><td data-label="Date">05.11.2025</td><td data-label="Day">Wednesday</td><td data-label="Occasion">Gurunanak Jayanthi</td></tr>
+
+              <tr><td rowspan="2" data-label="Month">December</td><td data-label="Date">25.12.2025</td><td data-label="Day">Thursday</td><td data-label="Occasion">Christmas</td></tr>
+              <tr><td data-label="Date">26.12.2025 - 31.12.2025</td><td data-label="Day">Friday - Wednesday</td><td data-label="Occasion">Christmas / Winter Break</td></tr>
+
+              <tr><td rowspan="3" data-label="Month">January</td><td data-label="Date">01.01.2026</td><td data-label="Day">Thursday</td><td data-label="Occasion">New Year</td></tr>
+              <tr><td data-label="Date">02.01.2026</td><td data-label="Day">Friday</td><td data-label="Occasion">School Re-opens</td></tr>
+              <tr><td data-label="Date">14.01.2026</td><td data-label="Day">Wednesday</td><td data-label="Occasion">Makar Sankranti</td></tr>
+
+              <tr><td data-label="Month">February</td><td data-label="Date">19.02.2026</td><td data-label="Day">Thursday</td><td data-label="Occasion">Ch. Shivaji Maharaj Jayanti</td></tr>
+
+              <tr><td rowspan="4" data-label="Month">March</td><td data-label="Date">03.03.2026</td><td data-label="Day">Tuesday</td><td data-label="Occasion">Dhuliwandan (Holi 2nd day)</td></tr>
+              <tr><td data-label="Date">19.03.2026</td><td data-label="Day">Thursday</td><td data-label="Occasion">Gudi Padwa / Ramzan Eid (Eid ul Fitr)</td></tr>
+              <tr><td data-label="Date">26.03.2026</td><td data-label="Day">Thursday</td><td data-label="Occasion">Ram Navami</td></tr>
+              <tr><td data-label="Date">31.03.2026</td><td data-label="Day">Tuesday</td><td data-label="Occasion">Mahavir Jayanti</td></tr>
+
+              <tr><td rowspan="2" data-label="Month">April</td><td data-label="Date">03.04.2026</td><td data-label="Day">Friday</td><td data-label="Occasion">Good Friday</td></tr>
+              <tr><td data-label="Date">14.04.2026</td><td data-label="Day">Tuesday</td><td data-label="Occasion">Dr. Ambedkar Jayanti</td></tr>
+
+              <tr><td data-label="Month">May</td><td data-label="Date">Summer Vacation</td><td data-label="Day">Fri - Sat</td><td data-label="Occasion">School Re-opens on 15th June 2026 (Tentative)</td></tr>
+            </tbody>
+          </table>
         </section>
     </main>
 
@@ -153,16 +159,19 @@
       <div class="footer-overlay"></div>
       <div class="footer-inner container-fluid">
         <div class="footer-item first">
-            <img src="images/logo.png" alt="">
-            <p class="m-0 text-white"> 1 Lt. Col. Tarapore Rd. Camp, Pune, Maharashtra 411001</p>
-            <a href="tel:020 2636 2634" class="text-white">020 2636 2634., Ext. : 602</a>
-            <a href="mailto:someone@example.com" class="text-white">someone@example.com</a>
+            <div class="footer-imgs">
+              <img src="images/dastur-logo.png" alt="">
+              <img src="images/25-years-logo-white.png" alt="">
+            </div>
+            <a href="https://maps.app.goo.gl/9nRB7u1hxrdzMLov7" target="_blank"><p class="m-0 text-white"> 1 Lt. Col. Tarapore Rd. Camp, Pune, Maharashtra 411001</p></a>
+            <a href="tel:02026362634" class="text-white">020 2636 2634., Ext. : 602</a>
+            <a href="mailto:sdhhs@dasturcoed.org" class="text-white">sdhhs@dasturcoed.org</a>
         </div>
         <div class="footer-item">
           <h2 class="common-heading text-white">Our Campus</h2>
           <ul>
             <li><a href="index.html" class="text-white">Home</a></li>
-            <li><a href="#" class="text-white">About Us</a></li>
+            <li><a href="about.html" class="text-white">About Us</a></li>
             <li><a href="#" class="text-white">Timing & Prayer</a></li>
             <li><a href="#" class="text-white">Infrastructure</a></li>
             <li><a href="#" class="text-white">Facilities</a></li>

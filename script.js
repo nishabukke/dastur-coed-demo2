@@ -72,3 +72,32 @@ items.forEach((item) => {
         caption.style.opacity = "0";
     });
 });
+
+
+// sticky header
+
+$(window).on("scroll touchmove", function() {
+
+  if ($(document).scrollTop() > $("#sticky-wrapper").position().top) {
+    $('.sticky-area').css('width', '100%');
+    $('.sticky-area').css('max-width', '1600px');
+    $('.sticky-area').css('margin', '0 auto');
+    $('.sticky-area').css('position', 'fixed');
+    $('.sticky-area').css('top', '0px');
+    $('.sticky-area').css('background', '#e9f2ff');
+    $('.sticky-area ul li a').css('color', '#085291');
+    $('.school-name').css('color', '#085291');
+    $('.sticky-area ul li a').css('font-weight', '500');
+    $('.sticky-area').css('z-index', '1');
+    $('.sticky-area').css('box-shadow', '0 3px 5px -2px #ebe8e8');
+    $('#sticky-wrapper').addClass('is-sticky');
+
+  }
+  else{
+  $('.sticky-area').removeAttr('style');
+  $('.sticky-area ul li a').removeAttr('style');
+  $('.school-name').removeAttr('style');
+
+  }
+  
+});

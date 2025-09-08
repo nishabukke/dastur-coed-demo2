@@ -72,7 +72,7 @@ ul li{
 
 .upper-header{
     background-color: #085291;
-    padding: 16px 0px;
+    padding: 5px 0px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -81,7 +81,7 @@ ul li{
 select#website-select{
   border: none;
   border-radius: 30px;
-  padding: 8px 5px;
+  padding: 5px 10px;
   background-color: #ffffffee;
   }
 
@@ -125,25 +125,26 @@ select#website-select{
     top: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(0deg, rgba(255,255,255,0) 0%, rgba(0,0,0,0.9) 100%);
+    background: linear-gradient(0deg, rgba(255,255,255,0) 0%, rgba(0,0,0,0.85) 100%);
 }
 
 .lower-header{
     position: absolute;
     left: 0;
-    top: 10%;
+    top: 8%;
     width: 100%;
+    z-index: 1111;
 }
 
 .lower-header .container-fluid{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 20px;
+    padding: 0px 20px;
 }
 
 .lower-header img{
-    width: 100px;
+    width: 80px;
 }
 
 .lower-header .logo{
@@ -168,7 +169,7 @@ select#website-select{
     }
 
     ul.nav .nav-li > a{
-        padding: 0px 0px 15px 0px;
+        padding: 0px 0px 10px 0px;
         color: #fff;
     }
 
@@ -182,8 +183,6 @@ select#website-select{
     
     ul.nav a{
         text-decoration: none;
-        padding: 9px 0px;
-        font-size: 18px;
         cursor: pointer;
     }
   
@@ -209,7 +208,7 @@ select#website-select{
       margin: 0;
       padding: 0;
       left: 20px;
-      top: 170%;
+      top: 160%;
       visibility: hidden;
       z-index: 10;
       -webkit-transition: all 0.3s linear 0s;
@@ -253,32 +252,6 @@ select#website-select{
       padding-right: 15px;
     }
   
-    .carousel-indicators [data-bs-target] {
-        box-sizing: content-box;
-        flex: 0 1 auto;
-        width: 15px;
-        height: 15px;
-        border-radius: 50%;
-        padding: 0;
-        margin-right: 5px;
-        margin-left: 5px;
-        text-indent: -999px;
-        cursor: pointer;
-        background-color: #fff;
-        background-clip: padding-box;
-        border: 0;
-        opacity: .5;
-        transition: opacity .6s ease;
-        position: relative;
-    }
-
-    .carousel-indicators .active{
-        opacity: 1;
-        box-shadow: 0 0 0 2px rgba(255, 255, 255, 1);
-        border: none;
-        border-radius: 50%;
-        background: transparent;
-    }
 
 
 /* card section css start */
@@ -321,72 +294,138 @@ select#website-select{
 
 /* about section css start */
 
-.about-section-inner{
+.about-section{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 30px;
+}
+
+.left-about{
+    height: 100%;
+}
+
+.left-about img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.about-desc{
+    margin-top: 30px;
+}
+
+.card-body{
+  padding: 0;
+}
+
+.card-title{
+  text-align: center;
+  text-transform: uppercase;
+  background-color: #085291;
+  color:#fff;
+  padding: 15px;
+}
+
+.card-text{
+  padding: 25px;
+}
+
+.card-text p img{
+  margin-right: 5px;
+  width: 50px;
+}
+
+
+
+/* about section css end */
+
+
+/* achivement section css start */
+
+.achivement-section-inner{
     display: grid;
     grid-template-columns: 4.5fr 7.5fr;
     gap: 50px;
 }
 
-/* .left-about .common-heading, .right-about .common-heading{
-    padding-bottom: 15px;
-    border-bottom: 3px solid #f8c301;
-} */
-
-.about-desc{
-    margin-top: 40px;
+.achivement-desc, .feature-inner{
+    margin-top: 30px;
 }
 
-.about-desc img{
+.achivement-desc img{
     width: 100%;
     height: 250px;
     margin-bottom: 20px;
 }
 
-/* about section css end */
 
-
-/* ethos section css start */
-
-.ethos-section{
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
-    height: 580px;
-    background-image: url('images/ethos-img.jpeg');
-    transform: translate(0px, -0.7125px);
-    position: relative;
-    display: grid;
-    grid-template-columns: repeat(2,1fr);
+.feature-bg{
+  background-image: url('images/about-img.jpg');
+  background-position: center;
+  background-size: cover;
+  position: relative;
 }
 
-.ethos-content{
-    padding-right: 30px;
+.feature-overlay {
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+    background-color: #085291;
+    opacity: 0.9;
+    transition: background 0.3s, border-radius 0.3s, opacity 0.3s;
 }
 
-.ethos-content h2{
-    color: #fff;
-    font-weight: 700;
-    font-size: 42px;
+.features-section .common-heading{
+  position: relative;
+  z-index: 1;
+  color: #fff;
 }
 
-.ethos-inner{
-    margin-top: 50px;
-    display: grid;
-    grid-template-columns: repeat(2,1fr);
-    gap: 25px;
+.features-section .common-heading h2{
+  position: relative;
+  z-index: 1;
+  color: #fff;
 }
 
-.ethos-item{
-    padding: 40px 25px;
-    border: 2px solid #FFFFFF21;
-    color: #fff;
+.feature-inner{
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 20px;
+  padding: 20px;
+  position: relative;
+  z-index: 1;
+}
+
+.feature-heading{
     display: flex;
-    flex-direction: column;
-    gap: 10px;
-    border-top: 2px solid #f8c301;
+    gap: 20px;
+    align-items: center;
 }
 
-/* ethos section css end */
+.feature-item{
+  border: 2px solid #FFFFFF21;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  color: #fff;
+}
+
+.feature-item img{
+  width: 50px;
+}
+
+.feature-item .feature-desc{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+
+/* achivement section css end */
+
 
 /* Gallery Page CSS Start */
 
@@ -598,6 +637,7 @@ figure {
 
 .footer-item.first a:hover{
     text-decoration: underline;
+    color: #fff;
 }
 
 .footer-item.first img{

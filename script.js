@@ -85,7 +85,7 @@ $(window).on("scroll touchmove", function() {
     $('.sticky-area').css('position', 'fixed');
     $('.sticky-area').css('top', '0px');
     $('.sticky-area').css('background', '#e9f2ff');
-    $('.sticky-area ul li a').css('color', '#085291');
+    $('.sticky-area ul.nav .nav-li > a').css('color', '#085291');
     $('.school-name').css('color', '#085291');
     $('.sticky-area ul li a').css('font-weight', '500');
     $('.sticky-area').css('z-index', '1');
@@ -95,9 +95,28 @@ $(window).on("scroll touchmove", function() {
   }
   else{
   $('.sticky-area').removeAttr('style');
-  $('.sticky-area ul li a').removeAttr('style');
+  $('.sticky-area ul.nav .nav-li > a').removeAttr('style');
   $('.school-name').removeAttr('style');
 
   }
   
 });
+
+
+const audio = document.getElementById("bg-music");
+    const musicBtn = document.getElementById("music-btn");
+    const icon = document.getElementById("icon");
+
+    let isPlaying = false;
+
+    musicBtn.addEventListener("click", () => {
+      if (!isPlaying) {
+        audio.play();
+        isPlaying = true;
+        icon.innerHTML = '<path d="M5 9v6h4l5 5V4l-5 5H5z"/>'; // speaker on
+      } else {
+        audio.pause();
+        isPlaying = false;
+        icon.innerHTML = '<path d="M16 7h-2v10h2V7zm-4 0h-2v10h2V7z"/>'; // pause icon
+      }
+    });

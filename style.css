@@ -39,6 +39,31 @@ ul li{
     border-bottom: 3px solid #f8c301;
 }
 
+#music-btn {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: #0077cc;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+      z-index: 9999;
+      transition: background 0.3s;
+    }
+    #music-btn:hover {
+      background: #005fa3;
+    }
+    #music-btn svg {
+      fill: #fff;
+      width: 28px;
+      height: 28px;
+    }
+
 .primary-color{
     color: #191919;
 }
@@ -72,7 +97,7 @@ ul li{
 
 .upper-header{
     background-color: #085291;
-    padding: 5px 0px;
+    padding: 8px 0px;
     display: flex;
     justify-content: space-between;
     align-items: center;

@@ -103,20 +103,48 @@ $(window).on("scroll touchmove", function() {
 });
 
 
-const audio = document.getElementById("bg-music");
-    const musicBtn = document.getElementById("music-btn");
-    const icon = document.getElementById("icon");
+// mobile menu
 
-    let isPlaying = false;
+$( document ).ready(function() {
 
-    musicBtn.addEventListener("click", () => {
-      if (!isPlaying) {
-        audio.play();
-        isPlaying = true;
-        icon.innerHTML = '<path d="M5 9v6h4l5 5V4l-5 5H5z"/>'; // speaker on
-      } else {
-        audio.pause();
-        isPlaying = false;
-        icon.innerHTML = '<path d="M16 7h-2v10h2V7zm-4 0h-2v10h2V7z"/>'; // pause icon
-      }
+  $( ".cross" ).hide();
+  $( ".menu" ).hide();
+  $( ".canva_expander" ).click(function() {
+  $( ".menu" ).slideToggle( "slow", function() {
+  $( ".canva_expander" ).hide();
+  $( ".cross" ).show();
+  });
+  });
+  
+  $( ".cross" ).click(function() {
+  $( ".menu" ).slideToggle( "slow", function() {
+  $( ".cross" ).hide();
+  $( ".canva_expander" ).show();
+  });
+  });
+  
+  });
+
+ // Close out sub menu
+ $('.sub__close').click(function(e) {
+  e.preventDefault();
+  
+  $(this).parent().parent().removeClass('is-active');
+});
+
+// Trigger sub menu
+$('.menu ul .nav__submenu').click(function(e) {
+  e.preventDefault();
+  
+  $(this).siblings().addClass('is-active');
+});
+
+
+
+$(function() {
+    $('marquee').mouseover(function() {
+        $(this).attr('scrollamount',0);
+    }).mouseout(function() {
+         $(this).attr('scrollamount',5);
     });
+});

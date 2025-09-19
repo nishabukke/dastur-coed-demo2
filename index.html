@@ -36,25 +36,6 @@
                     </div>
                 </div>
             </div>
-        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-          <div class="carousel-inner">
-              <div class="carousel-item active">
-                <img src="images/banner1.jpg" class="d-block w-100" alt="...">
-              </div>
-              <div class="carousel-item">
-                <img src="images/Full_Staff_2000.jpg" class="d-block w-100" alt="...">
-              </div>
-          </div>
-          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-          </button>
-          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-          </button>
-          <div class="carousel-overlay"></div>
-        </div>
         <div class="lower-header sticky-wrapper" id="sticky-wrapper">
           <div class="sticky-area">
             <div class="container-fluid">
@@ -76,13 +57,11 @@
                   <li class="nav-li"><a href="#">Rules & Facilities</a>
                     <div class="dropdown">
                         <ul>
-                            <li><a href="#">Timings & Prayer</a></li>
-                            <li><a href="uniform.html">Uniform</a></li>
-                            <li><a href="#">Rules for School</a></li>
-                            <li><a href="#">Infrastructure</a></li>
-                            <li><a href="#">Facilities</a></li>
-                            <li><a href="#">Library</a></li>
-                            <li><a href="#">Labs</a></li>
+                          <li><a href="#">Rules for School</a></li>
+                          <li><a href="uniform.html">Uniform</a></li>
+                          <li><a href="#">Infrastructure</a></li>
+                          <li><a href="#">Facilities</a></li>
+                          <li><a href="#">Admission & Withdrawal</a></li>
                         </ul>
                       </div>
                   </li>
@@ -93,6 +72,7 @@
                             <li><a href="#">Examination & Promotion</a></li>
                             <li><a href="#">Results & Awards</a></li>
                             <li><a href="#">Co-curricular</a></li>
+                            <li><a href="#">Achievements</a></li>
                         </ul>
                       </div>
                   </li>
@@ -106,53 +86,107 @@
       </div>
     </header>
 
-    <!-- Audio element -->
-  <audio id="bg-music" loop autoplay>
-    <source src="images/demo-audio.mp3" type="audio/mpeg">
-  </audio>
-
-  <!-- Floating button -->
-  <div id="music-btn">
-    <!-- Speaker icon (SVG) -->
-    <svg id="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-      <path d="M5 9v6h4l5 5V4l-5 5H5z"/>
-    </svg>
-  </div>
+    <div class="mobile-header">
+      <div class="mobile-menu-container">
+          <div class="logo">
+              <a href="index.html"><img src="images/dastur-logo.png" alt=""></a>
+          </div>
+          <div class="mobile-menu">
+              <a class="canva_expander nav-menu-link menu-button" href="#">
+                  <span class="dot1"></span>
+                  <span class="dot2"></span>  
+                  <span class="dot3"></span>
+                  <span class="dot4"></span>
+              </a>
+              <button class="cross">&#735;</button>
+          <div class="menu">
+              <ul>
+                  <li><a href="index.html">Home</a></li>
+                  <li><a href="#" class="nav__submenu">About <i class="fas fa-chevron-right"></i>
+                    <ul class="nav__sub">
+                        <li class="nav__item"><a class="sub__close" href="#"><i class="fas fa-chevron-left"></i> Back</a></li>
+                        <li class="nav__item">
+                        <a class="nav__link" href="about.html">About Us</a>
+                        </li>
+                        <li class="nav__item">
+                        <a class="nav__link" href="principal-desk.html">Principal's Desk</a>
+                        </li>
+                    </ul>
+                    </a>
+                  </li>
+                  <li><a href="#" class="nav__submenu">Rules & Facilities <i class="fas fa-chevron-right"></i>
+                    <ul class="nav__sub">
+                        <li class="nav__item"><a class="sub__close" href="#"><i class="fas fa-chevron-left"></i> Back</a></li>
+                        <li class="nav__item">
+                        <a class="nav__link" href="#">Rules for School</a>
+                        </li>
+                        <li class="nav__item">
+                        <a class="nav__link" href="#">Uniform</a>
+                        </li>
+                        <li class="nav__item">
+                        <a class="nav__link" href="#">Infrastructure</a>
+                        </li>
+                        <li class="nav__item">
+                        <a class="nav__link" href="#">Facilities</a>
+                        </li>
+                        <li class="nav__item">
+                        <a class="nav__link" href="#">Admission & Withdrawl</a>
+                        </li>
+                    </ul>
+                    </a>
+                  </li>
+              <li>
+                  <a href="#" class="nav__submenu">Academics <i class="fas fa-chevron-right"></i>
+                      <ul class="nav__sub">
+                          <li class="nav__item"><a class="sub__close" href="#"><i class="fas fa-chevron-left"></i> Back</a></li>
+                          <li class="nav__item">
+                          <a class="nav__link" href="#">Curriculum & Affiliation</a>
+                          </li>
+                          <li class="nav__item">
+                          <a class="nav__link" href="#">Examination & Promotion</a>
+                          </li>
+                          <li class="nav__item">
+                          <a class="nav__link" href="#">Results & Awards</a>
+                          </li>
+                          <li class="nav__item">
+                          <a class="nav__link" href="#">Co-Curricular</a>
+                          </li>
+                          <li class="nav__item">
+                          <a class="nav__link" href="#">Achievements</a>
+                          </li>
+                      </ul>
+                  </a>
+              </li>
+              <li><a href="gallery.html">Gallery</a></li>
+              <li><a href="calendar.html">Calendar</a></li>
+              <li><a href="contact.html">Contact Us</a></li>
+              </ul>
+          </div> 
+          </div>
+      </div>
+    </div>
 
     <main class="site-content">
-
-
-      <!-- <section class="card-section">
-        <div class="container-fluid">
-          <div class="card-item">
-            <div class="card-header">
-              <img src="images/infrastructure.png" alt="">
-              <h5 class="m-0 text-white">Infrastructure</h5>
-            </div>
-            <div class="card-desc text-white">
-              The School has a modern building with all amenities to provide an environment conducive for learning. The classrooms are spacious, well lit and equipped with audio visual aids to enhance the learning experience.
-            </div>
+      <section class="carousel-section">
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="images/banner1.jpg" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="images/banner2-1.jpg" class="d-block w-100" alt="...">
+              </div>
           </div>
-          <div class="card-item">
-            <div class="card-header">
-              <img src="images/academics.png" alt="">
-              <h5 class="m-0 text-white">Academics</h5>
-            </div>
-            <div class="card-desc text-white">
-              The evaluation system from Class V to VIII is based on grades rather than marks for a more qualitative assessment of abilities through subjective evaluations, rather than through the examination model which is often accused of putting inordinate pressure on students at a young age.
-            </div>
-          </div>
-          <div class="card-item">
-            <div class="card-header">
-              <img src="images/athletics.png" alt="">
-              <h5 class="m-0 text-white">Athletics</h5>
-            </div>
-            <div class="card-desc text-white">
-              The school provides adequate opportunities beyond classroom instruction to create well rounded personalities of students. Students are exposed to Declamation, Elocution, Essay writing, Music, Dance and Sports like football, handball, cricket, basketball for which regular competitions are organized.
-            </div>
-          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
         </div>
-      </section> -->
+      </section>
 
       <section class="about-section section-lg container-fluid">
         <div class="left-about">
@@ -171,16 +205,58 @@
                         <div class="card-body">
                             <h5 class="card-title">Announcements</h5>
                             <p class="card-text">
-                                <marquee direction="up">
-                                    <p><img src="images/blinking_new.gif" alt="">Lorem ipsum dolor sit amet consectetur.</p>
-                                    <p><img src="images/blinking_new.gif" alt="">Lorem ipsum dolor sit amet consectetur.</p>
-                                    <p><img src="images/blinking_new.gif" alt="">Lorem ipsum dolor sit amet consectetur.</p>
-                                    <p><img src="images/blinking_new.gif" alt="">Lorem ipsum dolor sit amet consectetur.</p>
-                                </marquee>
+                                <marquee direction="up" scrollamount="3" onmouseover="this.stop();" onmouseout="this.start();">
+                                  <p><img src="images/blinking_new.gif" alt=""> Lorem ipsum dolor sit amet consectetur.</p>
+                                  <p><img src="images/blinking_new.gif" alt=""> Lorem ipsum dolor sit amet consectetur.</p>
+                                  <p><img src="images/blinking_new.gif" alt=""> Lorem ipsum dolor sit amet consectetur.</p>
+                                  <p><img src="images/blinking_new.gif" alt=""> Lorem ipsum dolor sit amet consectetur.</p>
+                              </marquee>
                             </p>
                         </div>
                     </div>
         </div>
+      </section>
+
+      <section class="facilities-section section-lg container-fluid">
+        <h2 class="common-heading">Campus Highlights</h2>
+         <div class="card__container">
+            <article class="card__article">
+               <img src="images/library.jpg" alt="image" class="card__img">
+
+               <div class="card__data">
+                  <h2 class="card__title">Library</h2>
+               </div>
+            </article>
+            <article class="card__article">
+               <img src="images/science-lab.jpg" alt="image" class="card__img">
+
+               <div class="card__data">
+                  <h2 class="card__title">Laboratory</h2>
+               </div>
+            </article>
+            <article class="card__article">
+               <img src="images/computer-lab.jpg" alt="image" class="card__img">
+
+               <div class="card__data">
+                  <h2 class="card__title">Computer Lab</h2>
+               </div>
+            </article>
+            <article class="card__article">
+               <img src="images/health.jpg" alt="image" class="card__img">
+
+               <div class="card__data">
+                  <h2 class="card__title">Health & Wellness</h2>
+               </div>
+            </article>
+            <article class="card__article">
+               <img src="images/library.jpg" alt="image" class="card__img">
+
+               <div class="card__data">
+                  <h2 class="card__title">Sports Activities</h2>
+               </div>
+            </article>
+
+         </div>
       </section>
 
       <section class="achivement-section section-lg container-fluid">
@@ -317,7 +393,7 @@
             <li><a href="#" class="text-white">Co-curricular</a></li>
             <li><a href="#" class="text-white">Rules for School</a></li>
             <li><a href="gallery.html" class="text-white">Gallery</a></li>
-            <li><a href="calendar.html" class="text-white">Calender</a></li>
+            <li><a href="calendar.html" class="text-white">Calendar</a></li>
             <li><a href="contact.html" class="text-white">Contact Us</a></li>
           </ul>
         </div>
@@ -338,6 +414,25 @@
 
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script src="script.js"></script>
+
+    <script>
+            
+      function prev(){
+          document.getElementById('slider-container').scrollLeft -= 270;
+      }
+
+      function next()
+      {
+          document.getElementById('slider-container').scrollLeft += 270;
+      }
+
+
+      $(".slide img").on("click" , function(){
+        $(this).toggleClass('zoomed');
+        $(".overlay").toggleClass('active');
+      })
+
+    </script>
 
 </body>
 </html>
